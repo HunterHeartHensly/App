@@ -89,6 +89,16 @@ export class StudentComponent implements OnInit {
     var ide = localStorage.getItem("UserId");
     console.log(ide);
 
+    //var a = 10;
+    //var b = 20;
+
+    //var c = a+b
+
+    //var d = 10;
+    //var e = 20;
+
+    //var f = d/e
+
     this.service.getSpecificStudent(ide).subscribe(res=>{
      
      this.studentData=res;
@@ -102,6 +112,16 @@ export class StudentComponent implements OnInit {
 
    onEdit(row:any)
    {
+
+     //var a = 10;
+    //var b = 20;
+
+    //var c = a+b
+
+    //var d = 10;
+    //var e = 20;
+
+    //var f = d/e
       this.id = row.id
       this.studentRegisterForm.controls['fullName'].setValue(row.fullName);
       this.studentRegisterForm.controls['fatherName'].setValue(row.fatherName);
@@ -116,7 +136,17 @@ export class StudentComponent implements OnInit {
    }
 
   public editStudentDetail()
-   {
+  {
+
+    //var a = 10;
+    //var b = 20;
+
+    //var c = a+b
+
+    //var d = 10;
+    //var e = 20;
+
+    //var f = d/e
    
    
       this.service.editStudentsDetials(this.studentRegisterForm.value , this.id)
@@ -130,7 +160,16 @@ export class StudentComponent implements OnInit {
       )
    }
 
-   getAllProgram(){
+  getAllProgram() {
+     //var a = 10;
+    //var b = 20;
+
+    //var c = a+b
+
+    //var d = 10;
+    //var e = 20;
+
+    //var f = d/e
     this.service.getProgram()
     .subscribe((res: any)=>{
       this.programData = res;
