@@ -62,126 +62,158 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form  [formGroup] ="studentRegisterForm" >
+        <form [formGroup]="studentRegisterForm">
 
 
           <div class="form-group">
-            <label >LastProgram</label>
+            <label>LastProgram</label>
             <br>
-            <select class="form-select" formControlName="lastProgram" >
-              <option value="" >LastProgram</option>
+            <select class="form-select" formControlName="lastProgram">
+              <option value="">LastProgram</option>
               <!-- <option></option> -->
               <option *ngFor="let program of programData" [value]="program.name">{{program.name}}</option>
-           </select>
-  
-           <span class="text-danger" *ngIf="lastProgram && lastProgram.invalid && lastProgram.touched">Enter the LastProgram</span>
-  
+            </select>
+
+            <span class="text-danger" *ngIf="lastProgram && lastProgram.invalid && lastProgram.touched">Enter the LastProgram</span>
+
           </div>
+
+          <!--//var a = 10;
+  //var b = 20;
+
+  //var c = a+b
+
+  //var d = 10;
+  //var e = 20;
+
+  //var f = d/e-->
 
 
           <fieldset disabled>
 
-          <div class="form-group">
-            <label for="exampleInputPassword1">FullName</label>
-            <input formControlName="fullName"  type="text" class="form-control"  placeholder="FullName" >
-                  
+            <div class="form-group">
+              <label for="exampleInputPassword1">FullName</label>
+              <input formControlName="fullName" type="text" class="form-control" placeholder="FullName">
+
               <span class="text-danger" *ngIf="fullName && fullName.invalid && fullName.touched">Enter the FullName</span>
 
-          </div>
+            </div>
 
-          <div class="form-group">
-            <label for="exampleInputPassword1">FatherName</label>
-            <input formControlName="fatherName" type="text" class="form-control" 
-              placeholder="FatherName">
+            <div class="form-group">
+              <label for="exampleInputPassword1">FatherName</label>
+              <input formControlName="fatherName" type="text" class="form-control"
+                     placeholder="FatherName">
 
               <span class="text-danger" *ngIf="fatherName && fatherName.invalid && fatherName.touched">Enter the FatherName</span>
 
-          </div>
-          <!-- <div class="form-group">
-            <label for="exampleInputPassword1">Address</label>
-            <input formControlName="address" type="text" class="form-control" id="exampleInputPassword1"
-              placeholder="Address">
-              <span style="color: red;" *ngIf="address && address.invalid && address.touched">Enter the Address</span>
-          </div> -->
+            </div>
+            <!--//var a = 10;
+    //var b = 20;
 
-                    <!-- -------------------------------------- -->
-                    <!-- <div class="form-group">
-                      <label for="exampleInputPassword1">CurrentProgram</label>
-                      <input formControlName="currentProgram" type="text" class="form-control" id="exampleInputPassword1"
-                        placeholder="CurrentProgram">
-                        <span style="color: red;" *ngIf="currentProgram && currentProgram.invalid && currentProgram.touched">Enter the CurrentProgram</span>
-                    </div> -->
+    //var c = a+b
 
-                    <div class="form-group">
-                      <label >CurrentProgram</label>
-                      <br>
-                      <select class="form-select"  formControlName="currentProgram" >
-                        <option value="" >CurrentProgram</option>
-                        <!-- <option></option> -->
-                        <option *ngFor="let program of programData" [value]="program.name">{{program.name}}</option>
-                     </select>
-                     <span class="text-danger" *ngIf="currentProgram && currentProgram.invalid && currentProgram.touched">Enter the CurrentProgram</span>
+    //var d = 10;
+    //var e = 20;
 
-                    </div>
+    //var f = d/e-->
+            <!-- <div class="form-group">
+      <label for="exampleInputPassword1">Address</label>
+      <input formControlName="address" type="text" class="form-control" id="exampleInputPassword1"
+        placeholder="Address">
+        <span style="color: red;" *ngIf="address && address.invalid && address.touched">Enter the Address</span>
+    </div> -->
+            <!-- -------------------------------------- -->
+            <!-- <div class="form-group">
+      <label for="exampleInputPassword1">CurrentProgram</label>
+      <input formControlName="currentProgram" type="text" class="form-control" id="exampleInputPassword1"
+        placeholder="CurrentProgram">
+        <span style="color: red;" *ngIf="currentProgram && currentProgram.invalid && currentProgram.touched">Enter the CurrentProgram</span>
+    </div> -->
 
-                     <!-- -------------------------------------- -->
-        
-                       <!-- -------------------------------------- -->
-                       <!-- <div class="form-group">
-                        <label for="exampleInputPassword1">LastProgram</label>
-                        <input formControlName="lastProgram" type="text" class="form-control" id="exampleInputPassword1"
-                          placeholder="LastProgram">
-                          <span style="color: red;" *ngIf="lastProgram && lastProgram.invalid && lastProgram.touched">Enter the LastProgram</span>
-                      </div> -->
+            <div class="form-group">
+              <label>CurrentProgram</label>
+              <br>
+              <select class="form-select" formControlName="currentProgram">
+                <option value="">CurrentProgram</option>
+                <!-- <option></option> -->
+                <option *ngFor="let program of programData" [value]="program.name">{{program.name}}</option>
+              </select>
+              <span class="text-danger" *ngIf="currentProgram && currentProgram.invalid && currentProgram.touched">Enter the CurrentProgram</span>
 
-                      
-                       <!-- -------------------------------------- -->
+            </div>
 
-          <div class="form-group">
-            <label for="exampleInputPassword1">CurrentCGPA</label>
-            <input formControlName="currentGPA" type="text" class="form-control" id="exampleInputPassword1"
-              placeholder="CurrentCGPA">
+            <!-- -------------------------------------- -->
+            <!-- -------------------------------------- -->
+            <!-- <div class="form-group">
+      <label for="exampleInputPassword1">LastProgram</label>
+      <input formControlName="lastProgram" type="text" class="form-control" id="exampleInputPassword1"
+        placeholder="LastProgram">
+        <span style="color: red;" *ngIf="lastProgram && lastProgram.invalid && lastProgram.touched">Enter the LastProgram</span>
+    </div> -->
+            <!-- -------------------------------------- -->
+
+            <div class="form-group">
+              <label for="exampleInputPassword1">CurrentCGPA</label>
+              <input formControlName="currentGPA" type="text" class="form-control" id="exampleInputPassword1"
+                     placeholder="CurrentCGPA">
 
               <span class="text-danger" *ngIf="currentGPA && currentGPA.invalid && currentGPA.touched">Enter the CurrentCGPA</span>
 
-          </div>
+            </div>
 
-          <!-- <div class="form-group">
-            <label for="exampleInputPassword1">Status</label>
-            <input formControlName="status" type="text" class="form-control" id="exampleInputPassword1"
-              placeholder="Status">
-              <span style="color: red;" *ngIf="status && status.invalid && status.touched">Enter the Status</span>
-          </div> -->
+            <!--//var a = 10;
+    //var b = 20;
 
-      
+    //var c = a+b
 
-          <div class="form-group">
-            <label for="exampleInputPassword1">RegistrationDate</label>
-            <input formControlName="registratioDate" type="text" class="form-control" id="exampleInputPassword1"
-              placeholder="registratioDate">
+    //var d = 10;
+    //var e = 20;
+
+    //var f = d/e-->
+            <!-- <div class="form-group">
+      <label for="exampleInputPassword1">Status</label>
+      <input formControlName="status" type="text" class="form-control" id="exampleInputPassword1"
+        placeholder="Status">
+        <span style="color: red;" *ngIf="status && status.invalid && status.touched">Enter the Status</span>
+    </div> -->
+
+
+
+            <div class="form-group">
+              <label for="exampleInputPassword1">RegistrationDate</label>
+              <input formControlName="registratioDate" type="text" class="form-control" id="exampleInputPassword1"
+                     placeholder="registratioDate">
 
               <span class="text-danger" *ngIf="registratioDate && registratioDate.invalid && registratioDate.touched">Put the RegistratioDate</span>
 
 
-          </div>
+            </div>
 
-          <div class="form-group">
-            <!-- <label >Status</label> -->
-            <br>
-            <select class="form-select" formControlName="status">
-              <option value="">Status</option>
-              <!-- <option></option>  -->
-              <option *ngFor="let status of statusData" [value]="status.name">{{status.name}}</option>
-            </select>
-            <span class="text-danger" *ngIf="status && status.invalid && status.touched">Enter the Status</span>
+            <div class="form-group">
+              <!-- <label >Status</label> -->
+              <br>
+              <select class="form-select" formControlName="status">
+                <option value="">Status</option>
+                <!-- <option></option>  -->
+                <option *ngFor="let status of statusData" [value]="status.name">{{status.name}}</option>
+              </select>
+              <span class="text-danger" *ngIf="status && status.invalid && status.touched">Enter the Status</span>
 
-            
-          </div>
 
-          
-        </fieldset>
+            </div>
 
-       
+
+          </fieldset>
+
+          <!--//var a = 10;
+  //var b = 20;
+
+  //var c = a+b
+
+  //var d = 10;
+  //var e = 20;
+
+  //var f = d/e-->
 
 
         </form>
